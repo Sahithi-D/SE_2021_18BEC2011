@@ -50,6 +50,7 @@ public class Main{
                 if(e==false){
                     System.out.println("Invalid Input:- element not found in the array");
                 }
+                if(q=='B'){
                 switch(s2){
                     case 'l':
                     case 'L':
@@ -90,6 +91,50 @@ public class Main{
                     default:{
                     System.out.println("Invalid Move:- move given is wrong");
                     break;}
+                }}
+                else{
+                    switch(s2){
+                    case 'l':
+                    case 'L':
+                        {  
+                            if(n>0){
+                            a[m][n-1]=a[m][n];
+                            a[m][n]=null;
+                            break;}
+                        }
+                    case 'r':
+                    case 'R':
+                        {
+                            if(n<4){
+                            a[m][n+1]=a[m][n];
+                            a[m][n]=null;
+                            break;
+                            }
+                        }
+                    case 'f':
+                    case 'F':
+                        {
+                            if(m>0){
+                                a[m-1][n]=a[m][n];
+                                a[m][n]=null;
+                                break;
+                            }
+                            
+                        }
+                    case 'b':
+                    case 'B':
+                        {
+                            if(m<4){
+                                a[m+1][n]=a[m][n];
+                                a[m][n]=null;
+                                break;
+                            }
+                        }
+                    default:{
+                    System.out.println("Invalid Move:- move given is wrong");
+                    break;}
+                }
+                    
                 }
                 
             }
